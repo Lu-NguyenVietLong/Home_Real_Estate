@@ -30,10 +30,22 @@ module.exports = {
             transform: 'translateY(0px)',
             opacity: 1
           },
-        }
+        },
+
+        handleOpenSidebar: {
+          '0%': {transform: 'translateX(-100%)'},
+          '100%': {transform: 'translateX(0%)'},
+        },
+
+        handleCloseSidebar: {
+          '0%': {transform: 'translateX(0%)'},
+          '100%': {transform: 'translateX(-100px)'},
+        },
       },
       animation: {
         iconEffect: 'iconMoving 0.3s linear',
+        sidebarOpenEffect: 'handleOpenSidebar 0.4s linear',
+        sidebarCloseEffect: 'handleCloseSidebar 0.4s linear',
       }
     },
     colors: {

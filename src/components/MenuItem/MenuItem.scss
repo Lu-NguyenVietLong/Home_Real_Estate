@@ -1,13 +1,19 @@
-.menu-list {
 
-
-    &:hover > a{
-        color:#FFA920;
-        border-color: #FFA920;
-    }
-
-    &:hover > ul {
-        display: block;
+@media (min-width: 1023px) {
+    .menu-list {
+        &:hover > a{
+            color:#FFA920;
+            border-color: #FFA920;
+        }
+    
+        &:hover > p{
+            color:#FFA920;
+            border-color: #FFA920;
+        }
+    
+        &:hover > div {
+            display: block;
+        }
     }
 }
 
