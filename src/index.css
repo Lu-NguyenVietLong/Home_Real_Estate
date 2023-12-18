@@ -6,6 +6,7 @@
 
 @layer base {
     body {
-        @apply box-border;
+        @apply box-border text-text_color;
     }
 }
+      
