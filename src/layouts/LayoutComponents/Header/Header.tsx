@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 function Header() {
     const [openSideBar, setOpenSideBar] = useState<boolean>(false)
+    const [closeSideBar, setCloseSideBar] = useState<boolean>(false)
 
     const handleOpenSideBar = () => {
         setOpenSideBar(true)
@@ -15,6 +16,7 @@ function Header() {
 
     const handleCloseSideBar = () => {
         setOpenSideBar(false)
+        setCloseSideBar(true)
     }
 
     return (
@@ -58,14 +60,14 @@ function Header() {
                         </div>
                     </div>
                 </div>
-                <div className={`mobile-menu ${openSideBar ? '' : 'hidden'}`}>
-                    <div className='menu-backdrop fixed top-0 right-0 bottom-0 left-0 bg-[#000] opacity-40' onClick={handleCloseSideBar}></div>
-                    <div className="close-btn fixed right-[29px] top-[8px] text-[40px] text-[#fff] z-1000 lg:hidden"
+                <div className={`mobile-menu`}>
+                    <div className={`menu-backdrop fixed top-0 right-0 bottom-0 left-0 bg-[#000] opacity-40  ${openSideBar ? '' : 'hidden'}` }onClick={handleCloseSideBar}></div>
+                    <div className={`close-btn fixed right-[29px] top-[8px] text-[40px] text-[#fff] z-1000 lg:hidden ${openSideBar ? '' : 'hidden'} `}
                         onClick={handleCloseSideBar}
                     >
                         <FontAwesomeIcon icon={faXmark} />
                     </div>
-                    <SideBar />
+                    <SideBar openBar={openSideBar} closeBar={closeSideBar}  />
                 </div>
             </div>
         </header>

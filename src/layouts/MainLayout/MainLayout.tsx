@@ -11,7 +11,7 @@ function MainLayout({ children }: ComponentLayoutProps) {
     return (
         <div>
             <Header />
-            <div className="container">{children}</div>
+            <div className="container-app">{children}</div>
             <Footer />
         </div>
     );

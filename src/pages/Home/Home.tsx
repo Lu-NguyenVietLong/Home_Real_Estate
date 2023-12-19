@@ -1,7 +1,9 @@
+import SliderHome from "../../components/SliderHome/SliderHome";
+
 function Home() {
     return (
-        <div className="Home">
-            <h1>Home page</h1>
+        <div className="Home w-full">
+            <SliderHome />
         </div>
     );
 }
