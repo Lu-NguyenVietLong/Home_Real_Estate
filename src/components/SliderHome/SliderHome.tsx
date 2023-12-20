@@ -1,5 +1,6 @@
 import React from 'react'
 import FlatTab from '../FlatTab/FlatTab'
+import CounterNumber from '../CounterNumber/CounterNumber'
 
 const SliderHome = () => {
   return (
@@ -16,6 +17,16 @@ const SliderHome = () => {
                             <p className='text-[16px] leading-[24px] mt-[10px]'>Find a variety of properties that suit you very easily, forget all difficulties in finding a residence <br></br> for you</p>
                         </div>
                         <FlatTab />
+                        <div className='themes-count flex'>
+                            <div className='counter-box'>
+                                <div className='count-number'>
+                                    <CounterNumber />
+                                </div>
+                                <div className='count-title'>
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

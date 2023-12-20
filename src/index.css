@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply box-border text-text_color;
+        @apply box-border text-text_color text-[14px];
     }
 
     .container {

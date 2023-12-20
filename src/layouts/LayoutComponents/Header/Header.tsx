@@ -20,7 +20,7 @@ function Header() {
     }
 
     return (
-        <header id="header" className="w-ful h-[78px] shadow-md">
+        <header id="header" className="w-ful h-[78px] fixed top-0 right-0 left-0 z-50 bg-[#fff] shadow-md">
             <div className="header-wrapper h-full">
                 <div className='header-lower'>
                     <div className="grid grid-rows-1 grid-cols-1 px-[15px]">

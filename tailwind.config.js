@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       boxShadow: {
         'shadowDefault': '0px 4px 26px 0px rgba(66, 71, 76, 0.08)',
+        'shadowDefault2': '4px 5px 26px 11px rgba(66, 71, 76, 0.15)',
       },
       keyframes: {
         iconMoving: {

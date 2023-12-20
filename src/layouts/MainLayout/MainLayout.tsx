@@ -11,7 +11,7 @@ function MainLayout({ children }: ComponentLayoutProps) {
     return (
         <div>
             <Header />
-            <div className="container-app">{children}</div>
+            <div className="container-app mt-[80px]">{children}</div>
             <Footer />
         </div>
     );

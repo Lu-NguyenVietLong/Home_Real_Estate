@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSliders } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faSliders } from '@fortawesome/free-solid-svg-icons'
 import SelectionButton from '../SelectionButton/SelectionButton'
 import {LOCATION_TYPE_DATA, PROPERTY_TYPE_DATA} from '../../FakeData/OPTION_DATA'
 
-import Filter from '../Filter/Filter'
 import SelectionForm from '../SelectionForm/SelectionForm'
+import Button from '../Button/Button'
 
 const FlatTab = () => {
+    const [activeSelectForm, setActiveSelectForm] = useState(false)
+    const handleActiveSelectForm = () => {
+        setActiveSelectForm(prev => !prev)
+    }
   return (
     <div className='flat-tab'>
         <div className='box-tab'>
@@ -16,8 +20,8 @@ const FlatTab = () => {
                 <li className='bg-[#ece3d0] w-[115px] h-[40px] flex justify-center items-center rounded-tr-[20px] cursor-pointer transition-all hover:bg-primary'>Buy</li>
             </ul>
         </div>
-        <div className='content-tab'>
-            <div className='content-tab-wrapper relative table-cell bg-[#fff] rounded-xl p-[22px] relative mb-[30px] shadow-shadowDefault'>
+        <div className='content-tab '>
+            <div className='content-tab-wrapper shadow-shadowDefault2 table-cell bg-[#fff] rounded-xl p-[22px] relative mb-[30px]'>
                 <form>
                     <div className='form-group '>
                         <div className='option-group flex items-center'>
@@ -31,12 +35,17 @@ const FlatTab = () => {
                                 <SelectionButton dataOption={LOCATION_TYPE_DATA}>Location</SelectionButton>
                             </div>
                             <div className='option-group-item ml-[12px]'>
-                                <div className='icon-filter bg-primary w-[54px] h-[54px] flex justify-center items-center rounded-[10px] cursor-pointer text-[#fff]'>
+                                <div className='icon-filter bg-primary w-[54px] h-[54px] flex justify-center items-center rounded-[10px] cursor-pointer text-[#fff]'
+                                    onClick={handleActiveSelectForm}
+                                >
                                     <FontAwesomeIcon icon={faSliders} />
                                 </div>
                             </div>
+                            <div className='option-group-item ml-[12px]'>
+                                <Button rightIcon={<FontAwesomeIcon icon={faMagnifyingGlass}/>} widthSize={150}>Search Now</Button>
+                            </div>
                         </div>
-                        <div className='Selection-form-group absolute top-[110%] w-full'>
+                        <div className={`Selection-form-group absolute top-[110%] w-full ${activeSelectForm ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'} origin-top  transition-all`}>
                             <SelectionForm />
                         </div>
                     </div>
