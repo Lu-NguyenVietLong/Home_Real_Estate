@@ -12,6 +12,9 @@ module.exports = {
       '2xl': {'min': '1535px'},
     },
     extend: {
+      transformOrigin: {
+        'rotate-text': '0px 60px'
+      },
       boxShadow: {
         'shadowDefault': '0px 4px 26px 0px rgba(66, 71, 76, 0.08)',
         'shadowDefault2': '4px 5px 26px 11px rgba(66, 71, 76, 0.15)',
@@ -57,6 +60,10 @@ module.exports = {
         rotateMoveUp: {
           '0%' : {transform: 'rotate(135deg)'},
           '100%': {transform: 'rotate(-45deg)'}
+        },
+        rotateText: {
+          '0%': {transform: 'rotate(0deg)'},
+          '100%': {transform: 'rotate(360deg)'},
         }
         
       },
@@ -66,7 +73,9 @@ module.exports = {
         sidebarCloseEffect: 'handleCloseSidebar 0.4s linear',
         scaleSelectionEffect: 'scaleSelection 0.5s linear',
         rotateUpEffect: 'rotateMoveUp 0.3s linear',
-        rotateDownEffect: 'rotateMoveDown 0.3s linear'
+        rotateDownEffect: 'rotateMoveDown 0.3s linear',
+        rotateTextEffect: 'rotateText 10s linear infinite',
+        spinText: 'spin 8s linear infinite',
       }
     },
     colors: {
