@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {PRODUCT_DATA} from '../../../FakeData/PRODUCT_DATA'
 import ProductCard from '../../../components/ProductCard/ProductCard'
 
@@ -5,7 +6,7 @@ const  FEATURE_DATA = ['Houses', 'Smart home', 'Apartments', 'Office', 'Villa', 
 
 const Feature = () => {
 
-    console.log('list', PRODUCT_DATA);
+    const [activeTab, setActiveTab] = useState(FEATURE_DATA[0])
     
   return (
     <div className='mt-[100px]'>
@@ -20,15 +21,15 @@ const Feature = () => {
                 <div className='box-tab '>
                     <ul className='flex justify-center'>
                         {FEATURE_DATA.map((tab, index) =>(
-                            <li className='py-[8px] px-[14px] shadow-shadowDefault3 cursor-pointer hover:font-medium hover:text-primary mr-[13px]
-                                            before:w-[60px] before:h-[24px] before:absolute before:bg-[#fff] before:top-[0px]  before:shadow-shadowDefault
-                            '>{tab}</li>
+                            <li className={`py-[8px] px-[14px] shadow-shadowDefault3 cursor-pointer hover:font-medium hover:text-primary mr-[13px] before:w-[60px] before:h-[24px] before:absolute before:bg-[#fff] before:top-[0px]  before:shadow-shadowDefault ${activeTab === tab ? 'text-primary font-semibold': ''}`}
+                                onClick={() => setActiveTab(tab)}
+                            >{tab}</li>
                         ))}
                     </ul>
                 </div>
                 <div className='mt-[30px] grid lg:grid-cols-4 gap-[30px] md:grid-cols-2 mx-[25px]'>
                     {
-                        PRODUCT_DATA.map((item, index) => (
+                        PRODUCT_DATA.filter((product) => product.type === activeTab).map((item, index) =>(
                             <ProductCard product={item} key={index} />
                         ))
                     }

@@ -29,16 +29,16 @@ const ProductSlider = ({img} : {img: string[]}) => {
         <div className='absolute cursor-pointer w-full h-full overflow-hidden rounded-[10px]'>
           {img.map((imgAddress, index) => (
             <div  key={index} className='absolute w-full h-full overflow-hidden '>
-              <img className={`object-cover rounded-[10px] w-full h-full group-hover:brightness-50 group-hover:scale-[1.15] transition-all ${slideIndex === index ? 'opacity-100' : 'opacity-0'}`} src={imgAddress} alt='' />
+              <img className={`object-cover rounded-[10px] w-full h-full group-hover:brightness-50 group-hover:scale-[1.15] transition-all duration-300 ${slideIndex === index ? 'opacity-100' : 'opacity-0'}`} src={imgAddress} alt='' />
             </div>  
           ))}
-          <div className='absolute top-0 right-0 bottom-0 translate-y-[-40px] opacity-0 group-hover:translate-y-[-20px] group-hover:opacity-100 transition-all left-0 m-auto leading-[222px] text-[#fff] text-[140px] font-[200]'>
+          <div className='absolute top-0 right-0 bottom-0 translate-y-[-40px] opacity-0 group-hover:translate-y-[-20px] group-hover:opacity-100 transition-all duration-300 left-0 m-auto leading-[222px] text-[#fff] text-[120px] font-[200]'>
             +
           </div>
         </div>
       <div className='absolute flex bottom-[5%] items-center  '>
         <SliderButton moveSlide={prevSlide} direction={'prev'} />
-        <div className='flex mx-[10px] group-hover:mx-[15px]'>
+        <div className='flex mx-[10px] group-hover:mx-[15px] transition-all duration-300'>
           {
             Array.from({length: img.length}).map((item, index)=>(
               <div className={`dot w-[8px] h-[8px] mx-[2px]  cursor-pointer border-[#fff] border-[1px] rounded-[50%]  ${slideIndex === index ? 'bg-[#333]' : 'bg-[#fff]'} `}

@@ -8,6 +8,7 @@ import SelectionForm from '../SelectionForm/SelectionForm'
 import Button from '../Button/Button'
 
 const FlatTab = () => {
+    const [activeTab, setActiveTab] = useState('rent')
     const [activeSelectForm, setActiveSelectForm] = useState(false)
     const handleActiveSelectForm = () => {
         setActiveSelectForm(prev => !prev)
@@ -16,8 +17,12 @@ const FlatTab = () => {
     <div className='flat-tab'>
         <div className='box-tab'>
             <ul className='flex'>
-                <li className=' w-[115px] h-[40px] flex justify-center items-center rounded-tl-[20px] cursor-pointer transition-all hover:bg-primary bg-primary'>Rent</li>
-                <li className='bg-[#ece3d0] w-[115px] h-[40px] flex justify-center items-center rounded-tr-[20px] cursor-pointer transition-all hover:bg-primary'>Buy</li>
+                <li className={`w-[115px] h-[40px] flex justify-center items-center rounded-tl-[20px] cursor-pointer transition-all hover:bg-primary  ${activeTab=== 'rent' ? 'bg-primary' : 'bg-[#ece3d0]'}`}
+                    onClick={()=> setActiveTab('rent')}
+                >Rent</li>
+                <li className={`w-[115px] h-[40px] flex justify-center items-center rounded-tr-[20px] cursor-pointer transition-all hover:bg-primary ${activeTab=== 'buy' ? 'bg-primary' : 'bg-[#ece3d0]'}`}
+                    onClick={()=> setActiveTab('buy')}
+                >Buy</li>
             </ul>
         </div>
         <div className='content-tab '>

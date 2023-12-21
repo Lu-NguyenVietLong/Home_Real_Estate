@@ -1,4 +1,5 @@
 import SliderHome from "../../components/SliderHome/SliderHome";
+import AreaList from "../../layouts/LayoutComponents/AreaList/AreaList";
 import BrandSection from "../../layouts/LayoutComponents/BrandSection/BrandSection";
 import Feature from "../../layouts/LayoutComponents/Feature/Feature";
 
@@ -8,6 +9,7 @@ function Home() {
             <SliderHome />
             <BrandSection />
             <Feature />
+            <AreaList />
         </div>
     );
 }

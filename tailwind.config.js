@@ -21,6 +21,10 @@ module.exports = {
         'shadowDefault2': '4px 5px 26px 11px rgba(66, 71, 76, 0.15)',
       },
       keyframes: {
+        toHeight: {
+          '0%': {height: '0%'},
+          '100%': {height: '100%'},
+        },
         iconMoving: {
           '0%': {
             transform: 'translateY(0px)',
@@ -77,12 +81,16 @@ module.exports = {
         rotateDownEffect: 'rotateMoveDown 0.3s linear',
         rotateTextEffect: 'rotateText 10s linear infinite',
         spinText: 'spin 8s linear infinite',
+        toHeightEffect: 'toHeight 1s ease-out'
       }
     },
     colors: {
       text_color: '#120A21',
       primary: '#FFA920',
-      none: 'transparent'
+      fromColor: 'rgba(0, 0, 0, 0.5)',
+      none: 'transparent',
+      toColor: 'rgba(0, 0, 0, 1)',
+      gradient: 'linear-gradient(to bottom, transparent 0%, black 100%)'
     }
   },
   plugins: [],
