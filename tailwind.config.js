@@ -17,6 +17,7 @@ module.exports = {
       },
       boxShadow: {
         'shadowDefault': '0px 4px 26px 0px rgba(66, 71, 76, 0.08)',
+        'shadowDefault3': '4px 4px 18px 4px rgba(66, 71, 76, 0.13)',
         'shadowDefault2': '4px 5px 26px 11px rgba(66, 71, 76, 0.15)',
       },
       keyframes: {
@@ -81,6 +82,7 @@ module.exports = {
     colors: {
       text_color: '#120A21',
       primary: '#FFA920',
+      none: 'transparent'
     }
   },
   plugins: [],

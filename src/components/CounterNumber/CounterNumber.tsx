@@ -11,9 +11,8 @@ const CounterNumber = ({min, max}: props) => {
 
     useEffect(()=> {
       const handleScroll = () => {
-        console.log('xxxx');
         
-        if(window.scrollY > 90) {
+        if(window.scrollY > 40) {
           setCounterState(true)
         } else {
           setCounterState(false)

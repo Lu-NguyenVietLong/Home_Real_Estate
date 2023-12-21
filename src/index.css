@@ -9,6 +9,10 @@
         @apply box-border text-text_color text-[14px];
     }
 
+    body {
+      @apply overflow-x-hidden;
+    }
+
     .container {
         @apply w-full;
     }
