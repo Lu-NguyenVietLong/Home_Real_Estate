@@ -1,5 +1,6 @@
-import { faFaceMehBlank, faKaaba, faMaximize, faSackXmark, faSwimmingPool } from "@fortawesome/free-solid-svg-icons"
+import { faPhone, faKaaba, faMaximize, faSackXmark, faSwimmingPool, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import SocialIcon from "../../../components/SocialIcon/SocialIcon"
 
 const meetList = [
     {
@@ -28,7 +29,7 @@ const MeetSection = () => {
                 <p className='text-[#8E8E93]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lobortis justo</p>
             </div>
         </div>
-        <div className="px-[170px] mt-[60px] pb-[71px]">
+        <div className="px-[170px] mt-[60px] ">
             <div className='grid grid-cols-3 gap-7'>
                 {meetList.map((item, index) => (
                     <div className='meet-box group '>
@@ -41,22 +42,23 @@ const MeetSection = () => {
                                 <div><FontAwesomeIcon icon={faSackXmark} /></div>
                             </div>
                         </div>
-                        <div className='py-[21px]'>
+                        <div className='pt-[21px] flex justify-between'>
                             <div className=''>
                                 <h2 className='font-semibold text-[16px] hover:text-primary cursor-pointer'>{item.name}</h2>
                                 <p>{item.position}</p>
                             </div>
-                            <div className=''>
-                                
+                            <div className='flex'>
+                                <div className='mr-[10px]'><SocialIcon icon={<FontAwesomeIcon icon={faPhone}/>} background={'#fff'}  /></div>
+                                <div><SocialIcon icon={<FontAwesomeIcon icon={faEnvelope}/>} background={'#fff'}  /></div>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
-            <div className='w-full text-center'>
-                <p className='text-[#8E8E93] flex text-center w-full'>Become an agent and get the commission you deserve. <a href='#/' className='text-primary'>Contact us</a></p>
-            </div>
+        <div className='w-full flex justify-center mt-[40px]'>
+            <p className='text-[#8E8E93] font-[500]'>Become an agent and get the commission you deserve. <a href='#/' className='text-primary underline'>Contact us</a></p>
+        </div>
     </div>
   )
 }

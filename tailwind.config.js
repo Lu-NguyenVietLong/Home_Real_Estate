@@ -12,6 +12,9 @@ module.exports = {
       '2xl': {'min': '1535px'},
     },
     extend: {
+      backgroundImage: {
+        'Contact-bg': "url('https://themesflat.co/html/dreamhomehtml/assets/images/section/bg-contact.png')"
+      },
       transformOrigin: {
         'rotate-text': '0px 60px'
       },
@@ -81,7 +84,8 @@ module.exports = {
         rotateDownEffect: 'rotateMoveDown 0.3s linear',
         rotateTextEffect: 'rotateText 10s linear infinite',
         spinText: 'spin 8s linear infinite',
-        toHeightEffect: 'toHeight 1s ease-out'
+        toHeightEffect: 'toHeight 1s ease-out',
+        bounceSlow: 'bounce 4s linear infinite',
       }
     },
     colors: {

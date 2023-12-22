@@ -1,6 +1,8 @@
 import SliderHome from "../../components/SliderHome/SliderHome";
 import AreaList from "../../layouts/LayoutComponents/AreaList/AreaList";
+import BlogSection from "../../layouts/LayoutComponents/BlogSection/BlogSection";
 import BrandSection from "../../layouts/LayoutComponents/BrandSection/BrandSection";
+import Contact from "../../layouts/LayoutComponents/Contact/Contact";
 import Feature from "../../layouts/LayoutComponents/Feature/Feature";
 import MeetSection from "../../layouts/LayoutComponents/MeetSection/MeetSection";
 import ProductRent from "../../layouts/LayoutComponents/ProductRent/ProductRent";
@@ -16,6 +18,8 @@ function Home() {
             <ProductSale />
             <ProductRent />
             <MeetSection />
+            <Contact />
+            <BlogSection />
         </div>
     );
 }

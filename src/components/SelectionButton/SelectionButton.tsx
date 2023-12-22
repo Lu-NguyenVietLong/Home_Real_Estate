@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 
 type props = {
   children?: string,
-  dataOption?: string[]
+  dataOption?: string[],
+  widthFull?: boolean
 }
 
-const SelectionButton = ({dataOption, children}: props) => {
+const SelectionButton = ({dataOption, widthFull, children}: props) => {
   const [optionMound, setOptionMound] = useState(false)
   const [currentValue, setCurrentValue] = useState(children)
   return (
-    <div className='selection-button relative w-[266px]  rounded-[10px] border-[1px] bg-[#fff] border-[#E5E5EA]'>
+    <div className={`selection-button relative ${widthFull ? 'w-full' : 'w-[266px]'}  rounded-[10px] border-[1px] bg-[#fff] border-[#E5E5EA]`}>
         <div
           className='py-[14px] px-[17px] cursor-pointer '
           onClick={() => setOptionMound(prev=>!prev)}
