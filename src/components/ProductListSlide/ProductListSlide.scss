@@ -1,0 +1,26 @@
+.product-list .slick-dots .slick-active button {
+    background-color: #FFA920;
+}
+
+.product-list .slick-slide {
+    padding: 10px 15px;
+}
+
+.product-list .slick-dots {
+    bottom: -40px;
+}
+
+.product-list .slick-dots li {
+    width: 70px;
+    button {
+        background-color: #f0ebe3;
+        width: 66px;
+        padding: 0;
+        height: 4px;
+
+        &::before{
+            display: none;
+        }
+    }
+}
+

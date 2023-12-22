@@ -32,7 +32,7 @@ const ProductSlider = ({img} : {img: string[]}) => {
               <img className={`object-cover rounded-[10px] w-full h-full group-hover:brightness-50 group-hover:scale-[1.15] transition-all duration-300 ${slideIndex === index ? 'opacity-100' : 'opacity-0'}`} src={imgAddress} alt='' />
             </div>  
           ))}
-          <div className='absolute top-0 right-0 bottom-0 translate-y-[-40px] opacity-0 group-hover:translate-y-[-20px] group-hover:opacity-100 transition-all duration-300 left-0 m-auto leading-[222px] text-[#fff] text-[120px] font-[200]'>
+          <div className='absolute w-full h-full flex justify-center items-center translate-y-[-40px] opacity-0 group-hover:translate-y-[-20px] group-hover:opacity-100 transition-all duration-300 left-0 m-auto leading-[222px] text-[#fff] text-[120px] font-[200]'>
             +
           </div>
         </div>

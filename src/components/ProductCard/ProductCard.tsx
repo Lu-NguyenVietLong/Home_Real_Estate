@@ -21,7 +21,7 @@ type ProductProps = {
 
 const ProductCard = ({ product }: { product: ProductProps }) => {
   return (
-    <div className='flex  rounded-[16px] py-[16px]  items-center w-full shadow-shadowDefault3 relative'>
+    <div className='flex bg-[#fff]  rounded-[16px] py-[16px]  items-center w-full shadow-shadowDefault3 relative'>
       <div className='w-full px-[16px]'>
         <div className='relative'>
           <ProductSlider img={product.img} />
