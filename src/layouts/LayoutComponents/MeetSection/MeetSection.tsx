@@ -53,8 +53,10 @@ const MeetSection = () => {
                     </div>
                 ))}
             </div>
-            <p className='text-[#8E8E93] flex text-center w-full'>Become an agent and get the commission you deserve. <a href='#/' className='text-primary'>Contact us</a></p>
         </div>
+            <div className='w-full text-center'>
+                <p className='text-[#8E8E93] flex text-center w-full'>Become an agent and get the commission you deserve. <a href='#/' className='text-primary'>Contact us</a></p>
+            </div>
     </div>
   )
 }
