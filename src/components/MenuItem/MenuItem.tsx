@@ -24,7 +24,7 @@ const MenuItem: React.FC<{items: MenuType, index?: number, depthLevel: number}> 
 
   return (
     <li 
-        className={`menu-list ${items.title === activeMenu ? 'menu_item--active' :''} ${ depthLevel===0 ? 'lg:py-[28px] lg:mr-[30px] ' : 'py-[4px] w-full .menu-dropdown-list' } text-[14px] leading-6 cursor-pointer relative `}
+        className={`menu-list ${items.title === activeMenu ? 'menu_item--active' :''} ${ depthLevel===0 ? 'lg:py-[28px] lg:mr-[30px] xl:mr-[15px]' : 'py-[4px] w-full .menu-dropdown-list' } text-[14px] leading-6 cursor-pointer relative `}
 
     >
             {

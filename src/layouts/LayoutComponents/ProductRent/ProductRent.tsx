@@ -6,7 +6,7 @@ const ProductRent = () => {
     <div className="bg-[#f5f3f3] pt-[20px] pb-[20px]">
         <div className='grid grid-cols-1 mt-[41px] mb-[14px] '>
             <div className='text-center'>
-                <h2 className='text-[45px] font-bold'>Properties for rent</h2>
+                <h2 className='text-[45px] font-bold sm:leading-[52px]'>Properties for rent</h2>
                 <p className='text-[#8E8E93]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lobortis justo</p>
             </div>
         </div>

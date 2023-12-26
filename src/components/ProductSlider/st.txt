@@ -29,7 +29,7 @@ const ProductSlider = ({img} : {img: string[]}) => {
         <div className='absolute cursor-pointer w-full h-full overflow-hidden rounded-[10px]'>
           {img.map((imgAddress, index) => (
             <div  key={index} className='absolute w-full h-full overflow-hidden '>
-              <img className={`object-cover rounded-[10px] w-full h-full group-hover:brightness-50 group-hover:scale-[1.15] transition-all duration-300 ${slideIndex === index ? 'opacity-100 transition-all duration-500' : 'opacity-0 transition-all duration-500'}`} src={imgAddress} alt='' />
+              <img className={`object-cover rounded-[10px] w-full h-full group-hover:brightness-50 group-hover:scale-[1.15] transition-all duration-300 ${slideIndex === index ? 'opacity-100' : 'opacity-0'}`} src={imgAddress} alt='' />
             </div>  
           ))}
           <div className='absolute w-full h-full flex justify-center items-center translate-y-[-40px] opacity-0 group-hover:translate-y-[-20px] group-hover:opacity-100 transition-all duration-300 left-0 m-auto leading-[222px] text-[#fff] text-[120px] font-[200]'>
@@ -58,3 +58,60 @@ const ProductSlider = ({img} : {img: string[]}) => {
 export default ProductSlider
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SliderButton from '../SliderButton/SliderButton'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
+import './ProductSlider.scss'
+
+const ProductSlider = ({img} : {img: string[]}) => {
+
+  return (
+    <div className='product-img-slider  relative flex justify-center group'>
+        <div className='overflow-hidden'>
+          <Swiper
+            dir="rtl"
+            navigation={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Navigation, Pagination]}
+            className="product-img-swiper"
+          >
+            {img.map((imgAddress, index) => (
+              <SwiperSlide>
+                <div className='relative cursor-pointer group'>
+                  <img className={`rounded-[10px] object-cover w-full h-full group-hover:brightness-50 transition-all duration-300`} src={imgAddress} alt='' />
+                  <div className='absolute select-none top-0 w-full h-full flex justify-center items-center translate-y-[-40px] opacity-0 group-hover:translate-y-[-20px] group-hover:opacity-100 transition-all duration-300 left-0 m-auto leading-[222px] text-[#fff] text-[120px] font-[200]'>
+                    +
+                  </div>
+                </div>
+              </SwiperSlide>
+          ))}
+          </Swiper>
+        </div>
+    </div>
+  )
+}
+
+export default ProductSlider

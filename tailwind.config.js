@@ -4,12 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'Fontawesome': ['Font Awesome 5 Free', 'system-ui'],
+    },
     screens: {
       'sm': {'max': '739px'},
       'md': {'min': '740px', 'max': '1023px'},
       'lg': {'min': '1023px'},
-      'xl': {'min': '1024px', 'max': '1534px'},
-      '2xl': {'min': '1535px'},
+      'xl': {'min': '1024px', 'max': '1199px'},
+      '2xl': {'min': '1200px'},
     },
     extend: {
       backgroundImage: {
@@ -24,6 +27,18 @@ module.exports = {
         'shadowDefault2': '4px 5px 26px 11px rgba(66, 71, 76, 0.15)',
       },
       keyframes: {
+        rotateY: {
+          '0%': {transform: 'rotateY(0deg)'},
+          '100%': {transform: 'rotateY(360deg)'},
+        },
+        rotateYHoverPart: {
+          '0%': {transform: 'rotateY(0deg)'},
+          '100%': {transform: 'rotateY(180deg)'},
+        },
+        rotateYUnHoverPart: {
+          '0%': {transform: 'rotateY(180deg)'},
+          '100%': {transform: 'rotateY(0deg)'},
+        },
         toHeight: {
           '0%': {height: '0%'},
           '100%': {height: '100%'},
@@ -43,6 +58,24 @@ module.exports = {
           },
           '100%': {
             transform: 'translateY(0px)',
+            opacity: 1
+          },
+        },
+        iconXMoving: {
+          '0%': {
+            transform: 'translateX(0px)',
+            opacity: 1
+          },
+          '49%': {
+            transform: 'translateX(20px)',
+            opacity: 0
+          },
+          '50%': {
+            transform: 'translateX(-20px)',
+            opacity: 0
+          },
+          '100%': {
+            transform: 'translateX(0px)',
             opacity: 1
           },
         },
@@ -77,6 +110,7 @@ module.exports = {
       },
       animation: {
         iconEffect: 'iconMoving 0.3s linear',
+        iconXEffect: 'iconXMoving 0.3s linear',
         sidebarOpenEffect: 'handleOpenSidebar 0.4s linear',
         sidebarCloseEffect: 'handleCloseSidebar 0.4s linear',
         scaleSelectionEffect: 'scaleSelection 0.5s linear',
@@ -86,6 +120,9 @@ module.exports = {
         spinText: 'spin 8s linear infinite',
         toHeightEffect: 'toHeight 1s ease-out',
         bounceSlow: 'bounce 4s linear infinite',
+        rotateYEffect: 'rotateY 0.3s linear',
+        rotateYHoverPartEffect: 'rotateYHoverPart 0.4s linear',
+        rotateYUnHoverPartEffect: 'rotateUnYHoverPart 0.4s linear',
       }
     },
     colors: {

@@ -1,25 +1,93 @@
-.product-list .slick-dots .slick-active button {
-    background-color: #FFA920;
+
+
+@media (min-width: 1024px){
+    .product-list .slick-dots .slick-active button {
+        background-color: #FFA920;
+    }
+    
+    .product-list .slick-slide {
+        padding: 10px 15px;
+    }
+    
+    .product-list .slick-dots {
+        bottom: -60px;
+    }
+    
+    .product-list .slick-dots li {
+        width: 20px;
+        button {
+            background-color: #f0ebe3;
+            width: 20px;
+            padding: 0;
+            height: 4px;
+    
+            &::before{
+                display: none;
+            }
+        }
+    }
 }
 
-.product-list .slick-slide {
-    padding: 10px 15px;
+@media (max-width: 1023px){
+    .product-list .slick-dots .slick-active button {
+        background-color: #FFA920;
+
+    }
+    
+    .product-list .slick-slide {
+        padding: 10px 15px;
+    }
+
+    .product-list .slick-dots {
+        bottom: -60px;
+    }
+    
+    .product-list .slick-dots li {
+        width: 15px;
+        button {
+            background-color: #f0ebe3;
+            width: 15px;
+            padding: 0;
+            height: 4px;
+    
+            &::before{
+                display: none;
+            }
+        }
+    }
+
 }
 
-.product-list .slick-dots {
-    bottom: -40px;
+@media (min-width: 740px) and (max-width: 1023px) {
+
 }
 
-.product-list .slick-dots li {
-    width: 70px;
-    button {
-        background-color: #f0ebe3;
-        width: 66px;
-        padding: 0;
-        height: 4px;
+@media (max-width: 739px) {
 
-        &::before{
-            display: none;
+    .product-list .slick-dots .slick-active button {
+        background-color: #FFA920;
+
+    }
+    
+    .product-list .slick-slide {
+        padding: 10px 15px;
+    }
+
+    .product-list .slick-dots {
+        bottom: -60px;
+    }
+    
+    .product-list .slick-dots li {
+        width: 8px;
+        button {
+            background-color: #f0ebe3;
+            width: 8px;
+            padding: 0;
+            height: 4px;
+    
+            &::before{
+                display: none;
+            }
         }
     }
 }

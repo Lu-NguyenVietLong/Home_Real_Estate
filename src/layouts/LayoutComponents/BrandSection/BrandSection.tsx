@@ -13,11 +13,22 @@ const BrandSection = () => {
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
-    cssEase: "linear"
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 739,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+    ]
   };
   return (
     <div className='mt-[80px] bg-[#fff] flex justify-center '>
-       <div className='w-[1000px]'>
+       <div className='lg:w-[1000px] xl:w-full md:w-full sm:w-full'>
         <div className='mb-[30px] font-semibold'>
           <h2>Trusted by over 150+ major companies</h2>
         </div>

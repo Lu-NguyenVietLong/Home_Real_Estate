@@ -1,7 +1,7 @@
 
 type props = {
     icon: React.ReactNode,
-    background: string,
+    background?: string,
 }
 
 const SocialIcon = ({icon, background}: props) => {

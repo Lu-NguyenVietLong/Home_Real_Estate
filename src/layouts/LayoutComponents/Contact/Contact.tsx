@@ -13,11 +13,11 @@ const Contact = () => {
     <div className="bg-[url('https://themesflat.co/html/dreamhomehtml/assets/images/section/bg-contact.png')]
                     pb-[100px] bg-[#fff] bg-cover
     ">
-        <div className='px-[15px] max-w-[1140px] mt-[71px] m-auto'>
-            <div className='grid grid-cols-2'>
+        <div className='px-[15px] max-w-[1024px] mt-[71px] m-auto'>
+            <div className='grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-1 sm:grid-cols-1'>
                 <div className='relative'>
                     <div className='heading-contact mb-[54px] max-w-[488px]'>
-                        <h2 className='text-[40px] font-extrabold leading-[56px]'>We provide the most suitable and quality real estate.</h2>
+                        <h2 className='text-[40px] font-extrabold leading-[56px] sm:leading-[52px]'>We provide the most suitable and quality real estate.</h2>
                         <p className='text-[#8E8E93]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tristique metus proin id lorem odio</p>
                     </div>
                     <div className='info-contact'>
@@ -64,7 +64,7 @@ const Contact = () => {
                         <div className='title-contact mb-[14px] flex justify-between'>
                             <div className=''>
                                 <h2 className='text-[30px] font-bold '>Contact us</h2>
-                                <p className='text-[#8E8E93]'>We will respond as soon as we receive your message.</p>
+                                <p className='text-[#8E8E93] \'>We will respond as soon as we receive your message.</p>
                             </div>
                             <div className='text-primary text-[36px]'>
                                 <FontAwesomeIcon icon={faMessage} />
@@ -78,7 +78,7 @@ const Contact = () => {
                                         <input type='text' name='name' placeholder='Your name' className='relative mt-[11px] w-full outline-none border-[1px] border-[#E5E5EA] pt-[11px] pr-[14px] pb-[13px] pl-[46px] block text-[##120A21] font-medium rounded-[10px] bg-[#fff] focus:border-primary transition-all duration-300'  />
                                         <div className='text-primary absolute left-[18px] top-[49px]'><FontAwesomeIcon icon={faUser} /></div>
                                     </div>
-                                    <div className='text-respond grid grid-cols-2 gap-[20px] mb-[18px]'>
+                                    <div className='text-respond grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1  gap-[20px] mb-[18px]'>
                                         <div className='respond-text-email relative'>
                                             <label className='mb-[11px] text-[16px] font-bold'>Email</label>
                                             <input type='text' name='email' placeholder='Email' className='relative  mt-[11px] w-full outline-none border-[1px] border-[#E5E5EA] pt-[11px] pr-[14px] pb-[13px] pl-[46px] block text-[##120A21] font-medium rounded-[10px] bg-[#fff] focus:border-primary transition-all duration-300'  />
@@ -98,7 +98,7 @@ const Contact = () => {
                                         <label className='mb-[11px] text-[16px] font-bold'>Message</label>
                                         <textarea name='message' placeholder='Message' className='relative  mt-[11px] w-full outline-none border-[1px] border-[#E5E5EA] pt-[13px] pr-[15px] pb-[52px] pl-[17px] block text-[##120A21] font-medium rounded-[10px] bg-[#fff] focus:border-primary transition-all duration-300'  />
                                     </div>
-                                    <div className='mt-[18px]'>
+                                    <div className='mt-[18px] sm:flex sm:justify-center'>
                                         <Button leftIcon={<FontAwesomeIcon icon={faPaperPlane}/>} >Send request</Button>
                                     </div>
                                 </form>

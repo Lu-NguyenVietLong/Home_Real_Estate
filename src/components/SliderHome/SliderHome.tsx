@@ -12,15 +12,15 @@ const SliderHome = () => {
             </div>
             <div className='container relative max-w-[1520px]'>
                 <div className='grid grid-rows-1 grid-cols-1 px-[15px]'>
-                    <div className='content pt-[160px] pb-[140px]'>
-                        <div className='heading mb-[22px]'>
-                            <h1 className='text-[60px] leading-[72px] font-bold'>We will find a perfect <br></br> home for you</h1>
-                            <p className='text-[16px] leading-[24px] mt-[10px]'>Find a variety of properties that suit you very easily, forget all difficulties in finding a residence <br></br> for you</p>
+                    <div className='content pt-[160px] pb-[80px]'>
+                        <div className='heading lg:w-[50%] sm:w-full md:w-full mb-[22px]'>
+                            <h1 className='text-[60px] leading-[72px] font-bold'>We will find a perfect home for you</h1>
+                            <p className='text-[16px] leading-[24px] mt-[10px]'>Find a variety of properties that suit you very easily, forget all difficulties in finding a residence for you</p>
                         </div>
-                        <div className='absolute z-10'>
+                        <div className='relative z-10'>
                             <FlatTab />
                         </div>
-                        <div className='themes-count mt-[170px] flex'>
+                        <div className='themes-count mt-[50px] flex'>
                             <div className='counter-box mr-[80px]'>
                                 <div className='count-number flex text-[30px] font-bold mb-[20px]'>
                                     <CounterNumber min={0} max={1500} />
@@ -41,12 +41,12 @@ const SliderHome = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='images-home z-1 absolute top-[83px] right-[15px]'>
+                    <div className='images-home sm:hidden md:hidden'>
                         <div>
-                            <img className='w-[669px] h-[689px] md:h-[400px] md:w-[411px]' alt='' src='https://themesflat.co/html/dreamhomehtml/assets/images/slider/slider-1.png' />
+                            <img className='absolute top-[43px] right-[15px] w-[46%]' alt='' src='https://themesflat.co/html/dreamhomehtml/assets/images/slider/slider-1.png' />
                         </div>
                     </div>
-                    <div className='curved-text absolute top-[78px] right-[45%]'>
+                    <div className='curved-text absolute top-[10%] left-[54%] md:left-[85%] md:top-[5%] sm:hidden'>
                         <CurvedText />
                     </div>
                 </div>

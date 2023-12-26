@@ -9,7 +9,7 @@ const Feature = () => {
     const [activeTab, setActiveTab] = useState(FEATURE_DATA[0])
     
   return (
-    <div className='mt-[100px]'>
+    <div className='mt-[60px]'>
         <div className="grid gird-cols-1">
             <div className="Feature-layout flex justify-center">
                 <div className='heading-feature text-center'>
@@ -19,15 +19,15 @@ const Feature = () => {
             </div>
             <div className='Feature-tab text-center'>
                 <div className='box-tab '>
-                    <ul className='flex justify-center'>
+                    <ul className='flex justify-center flex-wrap'>
                         {FEATURE_DATA.map((tab, index) =>(
-                            <li className={`py-[8px] px-[14px] shadow-shadowDefault3 cursor-pointer hover:font-medium hover:text-primary mr-[13px] before:w-[60px] before:h-[24px] before:absolute before:bg-[#fff] before:top-[0px]  before:shadow-shadowDefault ${activeTab === tab ? 'text-primary font-semibold': ''}`}
+                            <li className={`py-[8px] px-[14px] mb-[10px] shadow-shadowDefault3 cursor-pointer hover:font-medium hover:text-primary mr-[13px] before:w-[60px] before:h-[24px] before:absolute before:bg-[#fff] before:top-[0px]  before:shadow-shadowDefault ${activeTab === tab ? 'text-primary font-semibold': ''}`}
                                 onClick={() => setActiveTab(tab)}
                             >{tab}</li>
                         ))}
                     </ul>
                 </div>
-                <div className='mt-[30px] grid lg:grid-cols-4 gap-[30px] md:grid-cols-2 mx-[25px]'>
+                <div className='mt-[30px] grid lg:grid-cols-4 xl:grid-cols-3 gap-[30px] md:grid-cols-2 sm-grid-cols-1 mx-[25px]'>
                     {
                         PRODUCT_DATA.filter((product) => product.type === activeTab).map((item, index) =>(
                             <ProductCard product={item} key={index} />

@@ -14,12 +14,12 @@ const CurvedText = () => {
     
 
   return (
-    <div className='circle  flex justify-center items-center w-[100px] h-[100px]  rounded-[50%] relative'>
+    <div className='circle bg-[#FFF5E0]  flex justify-center items-center w-[124px] h-[124px]  rounded-[50%] relative'>
         <span className='animate-rotateTextEffect font-bold'>LÙ</span>
         <div className='text w-full h-full absolute animate-rotateTextEffect'>
                 {
                     text.map((char, i) => (
-                        <span key={i} style={{transform: `rotate(${i * 14}deg)`}} className={`absolute origin-rotate-text left-[51px] font-extrabold top-[-12px]`}>{char}</span>
+                        <span key={i} style={{transform: `rotate(${i * 14}deg)`}} className={`absolute origin-rotate-text left-[62px] font-extrabold top-[3px]`}>{char}</span>
                     ))
                 }
         </div>

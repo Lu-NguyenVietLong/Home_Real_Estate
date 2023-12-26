@@ -20,10 +20,10 @@ const Button= ({leftIcon, rightIcon, separate = false, widthFull=false, widthSiz
 
             {leftIcon && <span className='icon-btn group-hover:animate-iconEffect text-[#fff] '>{leftIcon}</span>}
             <div className={`h-full  items-center ${leftIcon && separate ? 'flex before:h-[60%] before:inline-block before:w-[1px] before:bg-[#fff] before:opacity-40' : 'hidden'}`}></div>
-            <span className={`text-[#fff] font-bold text-[15px] select-none relative  ${rightIcon && separate? 'before:right-[-10px] before:h-full before:absolute before:w-[1px] before:bg-[#fff] before:opacity-40' : ''}`}>
+            <span className={`text-[#fff]  font-bold text-[15px] select-none relative  ${rightIcon && separate? 'before:right-[-10px] before:h-full before:absolute before:w-[1px] before:bg-[#fff] before:opacity-40' : ''}`}>
                 {children}
             </span>
-            <div className={`h-full  items-center ${rightIcon && separate ? 'flex before:h-[60%] before:inline-block before:w-[1px] before:bg-[#fff] before:opacity-40' : 'hidden'}`}></div>
+            {/* <div className={`h-full  items-center ${rightIcon && separate ? 'flex before:h-[60%] before:inline-block before:w-[1px] before:bg-[#fff] before:opacity-40' : 'hidden'}`}></div> */}
             {rightIcon && <span className='icon-btn text-[#fff]'>{rightIcon}</span>}
         </a>
     </div>

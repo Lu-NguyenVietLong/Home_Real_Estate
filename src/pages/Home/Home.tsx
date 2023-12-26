@@ -7,6 +7,7 @@ import Feature from "../../layouts/LayoutComponents/Feature/Feature";
 import MeetSection from "../../layouts/LayoutComponents/MeetSection/MeetSection";
 import ProductRent from "../../layouts/LayoutComponents/ProductRent/ProductRent";
 import ProductSale from "../../layouts/LayoutComponents/ProductSale/ProductSale";
+import TestimonialSection from "../../layouts/LayoutComponents/TestimonialSection/TestimonialSection";
 
 function Home() {
     return (
@@ -20,6 +21,7 @@ function Home() {
             <MeetSection />
             <Contact />
             <BlogSection />
+            <TestimonialSection />
         </div>
     );
 }
