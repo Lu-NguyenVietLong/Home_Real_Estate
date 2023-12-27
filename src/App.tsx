@@ -3,6 +3,7 @@ import { Fragment, ReactNode } from 'react';
 
 import { publicRoutes } from './routes/routes';
 import MainLayout from './layouts/MainLayout/MainLayout';
+import BackToTop from './components/BackToTop/BackToTop';
 
 type LayoutComponent = React.ComponentType<{ children: ReactNode }>;
 
@@ -10,6 +11,7 @@ function App() {
     return (
         <Router>
             <div className="App">
+                <BackToTop />
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         //What type of layout is a layout check

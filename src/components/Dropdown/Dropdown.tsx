@@ -16,7 +16,7 @@ const Dropdown:React.FC<{subMenus: SubMenuType, depthLevel: number}> = ({subMenu
     const dropdownClass = depthLevel > 1 ? "left-[210px] top-[0px] py-[4px] dropdown_menu_1" : "";
 
   return (
-    <ul className={`menu-dropdown  h-[${subMenus.length * 34}px] ${dropdownClass} ${marginTop} z-[${depthLevel}] w-[256px] pl-[30px] sm:overflow-hidden md:overflow-hidden lg:absolute  bg-[#fff] lg:shadow-md sm:bg-[#FFF5E0] md:bg-[#FFF5E0] sm:rounded-xl md:rounded-xl`}>
+    <ul className={`menu-dropdown  h-[${subMenus.length * 34}px] ${dropdownClass} ${marginTop} z-[${depthLevel}] w-[256px] pl-[30px] pb-[10px] sm:overflow-hidden md:overflow-hidden lg:absolute  bg-[#fff] lg:shadow-md sm:bg-[#FFF5E0] md:bg-[#FFF5E0] sm:rounded-xl md:rounded-xl`}>
         {
             subMenus.map((submenu, index) => (
                 <MenuItem depthLevel={depthLevel} index={index}  items={submenu} key={index} />
