@@ -1,12 +1,22 @@
 import { useState } from 'react'
 import {PRODUCT_DATA} from '../../../FakeData/PRODUCT_DATA'
 import ProductCard from '../../../components/ProductCard/ProductCard'
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light.css';
 
-const  FEATURE_DATA = ['Houses', 'Smart home', 'Apartments', 'Office', 'Villa', 'Bungalow']
+const  FEATURE_DATA = [
+    {title: 'Houses', quantity: 8},
+    {title: 'Smart home', quantity: 8},
+    {title: 'Apartments', quantity: 7},
+    {title: 'Office', quantity:4 },
+    {title: 'Villa', quantity: 3},
+    {title: 'Bungalow', quantity: 1}
+]
 
 const Feature = () => {
 
-    const [activeTab, setActiveTab] = useState(FEATURE_DATA[0])
+    const [activeTab, setActiveTab] = useState(FEATURE_DATA[0].title)
     
   return (
     <div className='mt-[60px]'>
@@ -21,9 +31,11 @@ const Feature = () => {
                 <div className='box-tab '>
                     <ul className='flex justify-center flex-wrap'>
                         {FEATURE_DATA.map((tab, index) =>(
-                            <li className={`py-[8px] px-[14px] mb-[10px] shadow-shadowDefault3 cursor-pointer hover:font-medium hover:text-primary mr-[13px] before:w-[60px] before:h-[24px] before:absolute before:bg-[#fff] before:top-[0px]  before:shadow-shadowDefault ${activeTab === tab ? 'text-primary font-semibold': ''}`}
-                                onClick={() => setActiveTab(tab)}
-                            >{tab}</li>
+                            <Tippy delay={[0, 100]} theme='light' content={`${tab.quantity} Property`} placement="top">
+                                <li className={`py-[8px] px-[14px] mb-[10px] shadow-shadowDefault3 cursor-pointer hover:font-medium hover:text-primary mr-[13px] before:w-[60px] before:h-[24px] before:absolute before:bg-[#fff] before:top-[0px]  before:shadow-shadowDefault ${activeTab === tab.title ? 'text-primary font-semibold': ''}`}
+                                    onClick={() => setActiveTab(tab.title)}
+                                >{tab.title}</li>
+                            </Tippy>
                         ))}
                     </ul>
                 </div>

@@ -2,6 +2,9 @@ import React from 'react'
 import ProductSlider from '../ProductSlider/ProductSlider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBath, faBed, faHeart, faSquareMinus } from '@fortawesome/free-solid-svg-icons'
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light.css';
 
 type ProductProps = {
   img: string[],
@@ -63,9 +66,11 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
                 <p className='text-primary'>+</p>
                 <p className='font-bold ml-[3px]'>Compare</p>
               </a>
-              <div>
-                <img alt='' src={product.author.img} className='rounded-[50%]' />
-              </div>
+              <Tippy delay={[0, 100]} theme='light' content={`${product.author.name}`} placement="top">
+                <div>
+                  <img alt='' src={product.author.img} className='rounded-[50%]' />
+                </div>
+              </Tippy>
               <div>
                 <p>{product.days} years ago</p>
               </div>
