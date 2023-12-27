@@ -7,6 +7,7 @@ import './ProductListSlide.scss'
 
 type ProductsProps = {
   img: string[],
+  sale?: boolean
   title: string,
   address: string,
   price: number,
@@ -67,7 +68,7 @@ const ProductSlide = ({products, slidesToShow}: {products: ProductsProps, slides
   return (
     <div className='product-list'>
         <Slider {...settings}>
-          {products.map((product, index) => (
+          {products.filter((product) => product.sale === true).map((product, index) => (
             <ProductCard product={product} />
           ))}
       </Slider>
